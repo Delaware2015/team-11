@@ -24,3 +24,7 @@ Donations Page
 Calc -- Button
 Entering Yourself -- Button
 
+
+<input type="button" value="BUTTONNAME"
+onclick="window.open('file:///PATHTOFILELOCATION/FILENAME.html')">
+
