@@ -4,3 +4,23 @@ Sign up Page
 Email address -- String
 Password 1 -- String
 Password 2 -- String
+Function to Verify that passwords are the same and valid
+
+Home Page
+UserName -- String
+Password -- String
+Login -- Button
+Create Account -- Button
+Function to Login
+Function to Go to the Signup page
+
+Login Home Page
+Make Donations -- Button
+History -- Button
+Year to Date Donation Instances -- String
+Year to Date Donation Amount -- Double
+
+Donations Page
+Calc -- Button
+Entering Yourself -- Button
+
