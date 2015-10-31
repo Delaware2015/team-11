@@ -29,16 +29,19 @@ ul#menu li a:hover {
   </head>
   <body>
     <ul id="menu">
-      <li><a href="/Settings/default.asp">Settings</a></li>
-      <li><a href="/Logout/default.asp">Logout</a></li>
+      <form action="http://ec2-54-163-172-26.compute-1.amazonaws.com/main_page.html">
+      <input type="submit" value="Logout"/>
+      </form>
     </ul>  
     <h1>jody123@gmail.com</h1>
-    <form action="action_page.php">
-       <button type="button" onclick="alert('makeDonation')">Make Donation</button>
-       <br>
-       <button type="button" onclick="alert('accessHistory')">History</button>
-       <br>
+   <form action="http://ec2-54-163-172-26.compute-1.amazonaws.com/donation.html">
+    <input type="submit" value="Make Donation"/>
     </form>
+    <br>
+    <form action="http://ec2-54-163-172-26.compute-1.amazonaws.com/History.html">
+    <input type="submit" value="History"/>
+    </form>
+    <br>
     <p> You have made 8 donations! </p>
     <p> Your donations are worth: $146.36 </p>
 
