@@ -1,8 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-
-  </style>
+  <script>
+  QRCode barcode = new QRCode();
+	
+	/*
+	   QRCode Valid data char set:
+	        numeric data (digits 0 - 9);
+	        alphanumeric data (digits 0 - 9; upper case letters A -Z; nine other characters: space, $ % * + - . / : );
+	        byte data (default: ISO/IEC 8859-1);
+	        Kanji characters
+	*/
+	barcode.setData("http://www.onbarcode.com");
+	barcode.setDataMode(QRCode.M_AUTO);
+	barcode.setVersion(10);
+	barcode.setEcl(QRCode.ECL_M);
+	
+	//  if you want to encode GS1 compatible QR Code, you need set FNC1 mode to IBarcode.FNC1_ENABLE
+	barcode.setFnc1Mode(IBarcode.FNC1_NONE);
+	
+	//  Set the processTilde property to true, if you want use the tilde character "~" to
+	//  specify special characters in the input data. Default is false.
+	//  1-byte character: ~ddd (character value from 0 ~ 255)
+	//  ASCII (with EXT): from ~000 to ~255
+	//  2-byte character: ~6ddddd (character value from 0 ~ 65535)
+	//  Unicode: from ~600000 to ~665535
+	//  ECI: from ~7000000 to ~7999999
+	//  SJIS: from ~9ddddd (Shift JIS 0x8140 ~ 0x9FFC and 0xE040 ~ 0xEBBF)
+	barcode.setProcessTilde(false);
+	
+	// unit of measure for X, Y, LeftMargin, RightMargin, TopMargin, BottomMargin
+	barcode.setUom(IBarcode.UOM_PIXEL);
+	// barcode module width in pixel
+	barcode.setX(3f);
+	
+	barcode.setLeftMargin(15f);
+	barcode.setRightMargin(15f);
+	barcode.setTopMargin(15f);
+	barcode.setBottomMargin(15f);
+	// barcode image resolution in dpi
+	barcode.setResolution(72);
+	
+	// barcode bar color and background color in Android device
+	barcode.setForeColor(AndroidColor.black);
+	barcode.setBackColor(AndroidColor.white);
+	
+	/*
+	specify your barcode drawing area
+	    */
+	    RectF bounds = new RectF(30, 30, 0, 0);
+	barcode.drawBarcode(canvas, bounds);
+  </script>
+  
+  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
