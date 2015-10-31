@@ -1,1 +1,46 @@
-Work in progress
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+  ul#menu {
+    padding: 0;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: orange;
+}
+  </style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  </head>
+  <body>
+    <ul id="menu">
+      <li><a href="/Settings/default.asp">Settings</a></li>
+      <li><a href="/Logout/default.asp">Logout</a></li>
+    </ul>  
+    <h1>jody123@gmail.com</h1>
+    <form action="action_page.php">
+       <button type="button" onclick="alert('makeDonation')">Make Donation</button>
+       <br>
+       <button type="button" onclick="alert('accessHistory')">History</button>
+       <br>
+    </form>
+    <p> You have made 8 donations! </p>
+    <p> Your donations are worth: $146.36 </p>
+
+  </body>
+</html>
