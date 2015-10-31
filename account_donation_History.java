@@ -5,25 +5,28 @@ import java .io.IOException;
 import java.util.Arrays;
 
 public class account_donation_History{
-
+// Variables related to getting the desired data and parsing a file
 public static double yearTotal = 0;
 public static double historyTotal = 0;
 public static String file;
 public static String Year;
 public static String account;
-
+/*
+* Takes in a string representing the Donor's account
+* Takes a string representing the csv file Name
+* Takes a string representing the Year that you want the donation records from
+*/
 public static void parseFile(String account, String csvFile, String Year){
 	BufferedReader br = null;
 	String line = "";
 	String csvSplitBy = ",";
 
+//Parses the csv file to get the data the programmer is asking for
 	try{
-	
 	br = new BufferedReader(new FileReader(csvFile));
 	while( (line = br.readLine()) != null){
 
 		String[] donation = line.split(csvSplitBy);
-//		System.out.println(Arrays.toString(donation));
 		if(donation[0].equals(account)){
 			if(donation[1].equals(Year)){
 				yearTotal += Double.parseDouble(donation[3]);
@@ -45,13 +48,12 @@ public static void parseFile(String account, String csvFile, String Year){
 		}
 	}
 }
-
-	public static void main(String[] args){
-/*
-	The first parameter is the csv file, that has the donation history
+//The Main Function of the File
+/*	The first parameter is the csv file, that has the donation history
 	The second parameter is the year to compare
 	The third parameter is the account's email address
 */
+	public static void main(String[] args){
 	file = args[0];
 	Year = args[1];
 	account = args[2];
