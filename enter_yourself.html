@@ -11,14 +11,16 @@
   </head>
   <body>
     <p> Enter estimated value: </p>
-    <form action="action_page.php">
        $
        <input type="text" name="fname"><br>
        <br>
-       <button type="button" onclick="alert('submit')">Submit</button>
+       <form action="http://ec2-54-163-172-26.compute-1.amazonaws.com/Result.html">
+        <input type="submit" value="Submit"/>
+      </form>
        <br>
-      <button type="button" onclick="alert('cancel')">Cancel</button>
-    </form>
+      <form action="http://ec2-54-163-172-26.compute-1.amazonaws.com/main_directory.html">
+        <input type="submit" value="Cancel"/>
+      </form>
 
   </body>
 </html>
