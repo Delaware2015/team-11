@@ -20,6 +20,39 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   </head>
+  <style>
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #266087;
+   background: -webkit-gradient(linear, left top, left bottom, from(#1a5882), to(#266087));
+   background: -webkit-linear-gradient(top, #1a5882, #266087);
+   background: -moz-linear-gradient(top, #1a5882, #266087);
+   background: -ms-linear-gradient(top, #1a5882, #266087);
+   background: -o-linear-gradient(top, #1a5882, #266087);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+</style>
 
   <body>
 
@@ -36,7 +69,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="Make Donation.html">Make a donation</a></li>
+            <li><a href="Make Donation.html">Make a Donation</a></li>
             <li><a href="Donation History.html">Donation History</a></li>
             <li><a href="Account Settings.html">Account Settings</a></li>
           </ul>
@@ -50,22 +83,15 @@
 	  <br>
 	  <br>
 	  <br>
-        <h1>Fill out your donation details below</h1>
-        <p class="lead"> <br> </p>
+        <h1>Choose how you want enter your donation</h1>
+		
+		<button class="button" onclick="window.location.href='Bulk Donation.html'" type="button">Bulk Donation</button>
+		
+		<button class="button" onclick="window.location.href='Itemized List.html'" type="button">Itemized List</button>
+
+		
       </div>
     </div>
-	
-<form>
-  Donations type:<br>
-  <input type="text" name="firstname">
-  <br>
-  Donation amount:<br>
-  <input type="text" name="lastname">
-  
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
-	
 	<!-- /.container -->
 
 

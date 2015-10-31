@@ -20,14 +20,38 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   </head>
-  
-  <style type="text/css">
-tr.d0 td {
-	background-color: grey; color: black;
-}
-tr.d1 td {
-	background-color: white; color: black;
-}
+    <style>
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #266087;
+   background: -webkit-gradient(linear, left top, left bottom, from(#1a5882), to(#266087));
+   background: -webkit-linear-gradient(top, #1a5882, #266087);
+   background: -moz-linear-gradient(top, #1a5882, #266087);
+   background: -ms-linear-gradient(top, #1a5882, #266087);
+   background: -o-linear-gradient(top, #1a5882, #266087);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 24px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
 </style>
 
   <body>
@@ -59,21 +83,22 @@ tr.d1 td {
 	  <br>
 	  <br>
 	  <br>
-        <h1>Donation History</h1>
-        <p class="lead"> <br> </p>
+        <h1>Bulk Donation</h1>
 		
-		<table style="width:100%">
-			<tr class="d1"><th>Donation Value</th><th>Donation Date</th></tr>
-			<tr class="d0"><td>$100</td><td>10/31/15</td></tr>
-			<tr class="d1"><td>$11</td><td>11/1/15</td></tr>
-			<tr class="d0"><td>$20</td><td>11/2/15</td></tr>
-			<tr class="d1"><td>$70</td><td>11/3/15</td></tr>
-		</table>
+		<button class="button" onclick="window.location.href='https://www.goodwill.org/wp-content/uploads/2010/12/Donation_Valuation_Guide.pdf'"
+		type="button">Valuation Guide</button>
+
 		
+		<form>
+			Estimate Donation Value ($)<br>
+			<input type="text" name="Value">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+
       </div>
     </div>
-	
-	
+			
 	<!-- /.container -->
 
 
