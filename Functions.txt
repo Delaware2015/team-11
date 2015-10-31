@@ -1,0 +1,6 @@
+Functions and the logic for Website Navigation
+
+Sign up Page
+Email address -- String
+Password 1 -- String
+Password 2 -- String
